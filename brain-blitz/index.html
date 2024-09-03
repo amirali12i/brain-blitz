@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brain Blitz</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Brain Blitz</h1>
+        
+        <!-- Fact Box -->
+        <div id="fact-box" class="fact-box">Click to Get Your Daily Fact!</div>
+
+        <!-- Voting Buttons -->
+        <div class="button-container">
+            <button id="interesting-btn">Interesting</button>
+            <button id="useless-btn">Useless</button>
+        </div>
+
+        <!-- Vote Stats Chart -->
+        <div class="vote-stats">
+            <canvas id="voteChart"></canvas>
+        </div>
+
+        <!-- Fact History -->
+        <div class="fact-history">
+            <h2>Last 5 Facts</h2>
+            <ul id="fact-history-list"></ul>
+        </div>
+
+        <!-- Streak Counter -->
+        <div id="streak-counter" class="streak-counter"></div>
+
+        <!-- Dark Mode Toggle -->
+        <div class="dark-mode-toggle">
+            <button id="dark-mode-toggle">Toggle Dark Mode</button>
+        </div>
+
+        <!-- Comments Section -->
+        <div class="comments-container">
+            <h3>Comments</h3>
+            <form id="comment-form">
+                <input type="text" id="comment-input" placeholder="Add a comment..." />
+                <button type="submit">Submit</button>
+            </form>
+            <div id="comments-section"></div>
+        </div>
+
+        <!-- Settings Menu -->
+        <div class="settings-container">
+            <h3>Customize Your Fact Display</h3>
+            <form id="settings-form">
+                <label for="font-size-input">Font Size:</label>
+                <input type="number" id="font-size-input" min="12" max="30" step="1">
+
+                <label for="font-style-input">Font Style:</label>
+                <input type="text" id="font-style-input">
+
+                <label for="bg-color-input">Background Color:</label>
+                <input type="color" id="bg-color-input">
+                <button type="submit">Apply</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="scripts/app.js"></script>
+</body>
+</html>
